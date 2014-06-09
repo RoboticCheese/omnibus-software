@@ -61,7 +61,7 @@ build do
            #'--with-file-aio',
            #'--with-libatomic'
           ].join(" "), :env => env
-
+  command "touch /opt/opscode/embedded/nginx/logs/.gitkeep"
   command "make -j #{max_build_jobs}", :env => env
   command "make install"
 end
